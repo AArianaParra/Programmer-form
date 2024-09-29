@@ -17,39 +17,44 @@
                 "&gt;" represents ">"-->
             </div>
             <div  class="col">
-                <button class="btn btn-default">Typical format</button>
+              <!-- IMPORTANT: setting the styles here is not affected by bootstrap overwritting -->
+                <button class="btn btn-default" style="color: white;">Typical format</button>
             </div>
             <div  class="col">
-                <button class="btn">Modern format</button>
+                <button class="btn" style="color: white;">Modern format</button>
             </div>
         </div>
     </header>
-    <main>
-        <form class="form-inline" method="post" action='https://register-demo.freecodecamp.org' id="survey-form" name="survey-form">
+    <main class="container-fluid container mt-5">
+      <hr>
+        <form class="d-flex flex-column gap-3" method="post" action='https://register-demo.freecodecamp.org' id="survey-form" name="survey-form">
+          <h3 class="format-title">Typical format</h3>
             <!-- Basic information------------------------------------------------- -->
-             <fieldset>
-                <legend>Basic information</legend>
+             <fieldset id="basic-info" class="border p-3" >
+                <legend class="">Basic information</legend>
+                <hr class="fieldset-hr">
              
-                <div class="mb-3">
-                <label class="form-label " for="name">Name: </label>
-                <input class="form-control form-control-md inline" id="name" type="text" placeholder="Type your name" aria-label="Type your name" required>
+                <div class="mb-3 row rows-col-3 basic-info">
+                <label class="form-label col-4" for="name">Name: </label>
+                <input class="form-control form-control-md col basic-input" id="name" type="text" placeholder="Type your name" aria-label="Type your name" required>
                 </div>
 
-                <div class="mb-3">
-                <label class="form-label " for="email">Email: </label>
-                <input class="form-control form-control-md inline" id="email" type="email" placeholder="Type your email" aria-label="Type your email" required>
+                <div class="mb-3 row rows-col-3 basic-info">
+                <label class="form-label col-4" for="email">Email: </label>
+                <input class="form-control form-control-md col basic-input" id="email" type="email" placeholder="Type your email" aria-label="Type your email" required>
                 </div>
 
-                <div class="mb-3">
-                <label class="form-label " for="occupation">Occupation: </label>
-                <input class="form-control form-control-md " id="occupation" type="text" placeholder="Type your name" aria-label="Type your occupation" required>
+                <div class="mb-3 row rows-col-3 basic-info">
+                <label class="form-label col-4" for="occupation">Occupation: </label>
+                <input class="form-control form-control-md col basic-input" id="occupation" type="text" placeholder="Type your name" aria-label="Type your occupation" required>
                 </div>
 
              </fieldset>
 
              <!-- Programming experience------------------------------------------------- -->
-              <fieldset>
+              <fieldset class="border p-3">
                 <legend>Programming experience</legend>
+                <hr class="fieldset-hr">
 
                 <!-- Years of programming experience -->
                 <div class="mb-3">
@@ -81,8 +86,8 @@
                     <label class="question">Which programming languages are you proficient in? (Select all that apply)</label>
                 </div>
 
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="python" checked>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" value="python" id="python" checked>
                     <label class="form-check-label" for="python">Python</label>
                   </div>
 
@@ -128,24 +133,25 @@
               </fieldset>
               
               <!-- Learning Preferences ------------------------------------------------- -->
-               <fieldset>
+               <fieldset class="border p-3">
                 <legend>Learning Preferences</legend>
+                <hr class="fieldset-hr">
 
                 <!-- Learning programming -->
                 <div class="mb-3">
                     <label class="question">How did you learn programming? (Select all that apply)</label>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="self-taught" id="self-taught" >
-                    <label class="form-check-label" for="self-taught">Self-taught</label>
+                <div class="form-check .check-container">
+                  <input class="form-check-input" type="checkbox" value="self-taught" id="self-taught" >
+                  <label class="form-check-label" for="self-taught">Self-taught</label>
                   </div>
 
-                  <div class="form-check">
+                  <div class="form-check .check-container">
                     <input class="form-check-input" type="checkbox" value="online-courses" id="online-courses" >
                     <label class="form-check-label" for="online-courses">Online courses</label>
                   </div>
 
-                  <div class="form-check">
+                  <div class="form-check ">
                     <input class="form-check-input" type="checkbox" value="university/college" id="university/college" >
                     <label class="form-check-label" for="university/college">University/College</label>
                   </div>
@@ -193,8 +199,10 @@
                </fieldset>
 
               <!-- Learning Preferences ------------------------------------------------- -->
-              <fieldset>
+              <fieldset class="border p-3">
                 <legend>Language Preferences</legend>
+                <hr class="fieldset-hr">
+
               <!-- Preferred language for web development -->
               <div class="mb-3">
                 <label class="question">Which programming language do you prefer for web development?</label>
@@ -241,6 +249,7 @@
                <!-- Feedback and Suggestions ------------------------------------------------- -->
                 <fieldset>
                   <legend>Feedback and Suggestions</legend>
+                  <hr class="fieldset-hr">
               
               <!-- Aditional comments -->
                <div class="mb-3">
@@ -249,9 +258,14 @@
 
               <div class="form-floating">
                 <!--To set a custom height on your <textarea>, do not use the rows attribute. Instead, set an explicit height (either inline or via custom CSS).-->
-                <textarea class="form-control" placeholder="Leave a comment here" id="comments" style="height: 100px"></textarea>
-                <label for="comments">Comments</label>
+                <textarea  class="form-control" placeholder="Leave a comment here" id="comments" style="height: 100px; width:90%; margin: 10px auto"></textarea>
+                <label for="comments" style="margin-left: 40px;">Comments</label>
               </div>
+            </fieldset>
+
+            <fieldset>
+              <input class="btn btn-default" type="submit" value="Submit">
+            </fieldset>
         </form>
     </main>
     <footer>
@@ -263,7 +277,7 @@
           <span>Copyright 2024</span>
         </div>
         <div class="col">
-          <span><a href="https://github.com/AArianaParra" target="_blank">Contact me</a></span>
+          <span><a class="text-decoration-none"  style="color: white;" href="https://github.com/AArianaParra" target="_blank">Contact me</a></span>
         </div>
       </div>
     </footer>

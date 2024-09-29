@@ -13,6 +13,13 @@
    scroll-behavior: smooth;
   }
 
+  body {
+    /*background-image: url("background.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    background-color: darkblue !important;
+  }
+
   form {
     width: 70%;
   }
@@ -23,11 +30,63 @@
     NOTE: go to Inspect> select the element> Down in CSS properties --- If the property is crossed out, it is overwritten */
     border-radius: 7px;
     padding: 10px;
+    /* margin-bottom: 30px !important; */
 }
 
 label.question, legend {
   font-weight: bold;
 }
 
+header, .format-title, footer {
+  color: white ;
+}
 
+.basic-info {
+  padding-right: 10%;
+}
+
+footer {
+  padding: 10px;
+  margin-top: 10px;
+  
+}
+
+hr {
+  border: 2px solid white !important;
+}
+
+.fieldset-hr {
+  border: 2px solid darkblue !important;
+  width: 100%;
+}
+
+textarea {
+  height: 50px;
+}
+
+a {
+  text-decoration: none; /* does not work*/
+}
+
+/* input[type="checklist"] {
+  margin-left: 80px;
+}  does not work*/
+
+
+input[type="checkbox"] + label { /*This points at all labels that have inputs type checklist as siblings*/
+  float: left;
+}
+
+/*input[type="checkbox"] {
+  margin-left: 30%;
+} */
+
+
+/* div:input[type="checkbox"]  does not work*/
+.form-check {
+  padding-left: 40% !important;
+  /* padding-left: 120px !important; Only solves the problem for smaal screen sizes*/
+   /*width: 40% ;  not the solution*/
+  /*background-color: blueviolet;*/
+} /* This does work */
 
