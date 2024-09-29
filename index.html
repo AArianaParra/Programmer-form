@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!--The X-UA-Compatible meta tag allows web authors to choose which version of Internet Explorer (IE) should render the page. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programmer form</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+        <div class=" row rows-col-4">
+            <div  class="col">
+                <h1><pre><code>&lt;Programmer form&gt;</code></pre></h1>
+                <!--"&lt;" represents "<"
+                "&gt;" represents ">"-->
+            </div>
+            <div  class="col">
+                <button class="btn btn-default">Typical format</button>
+            </div>
+            <div  class="col">
+                <button class="btn">Modern format</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form class="form-inline" method="post" action='https://register-demo.freecodecamp.org' id="survey-form" name="survey-form">
+            <!-- Basic information------------------------------------------------- -->
+             <fieldset>
+                <legend>Basic information</legend>
+             
+                <div class="mb-3">
+                <label class="form-label " for="name">Name: </label>
+                <input class="form-control form-control-md inline" id="name" type="text" placeholder="Type your name" aria-label="Type your name" required>
+                </div>
+
+                <div class="mb-3">
+                <label class="form-label " for="email">Email: </label>
+                <input class="form-control form-control-md inline" id="email" type="email" placeholder="Type your email" aria-label="Type your email" required>
+                </div>
+
+                <div class="mb-3">
+                <label class="form-label " for="occupation">Occupation: </label>
+                <input class="form-control form-control-md " id="occupation" type="text" placeholder="Type your name" aria-label="Type your occupation" required>
+                </div>
+
+             </fieldset>
+
+             <!-- Programming experience------------------------------------------------- -->
+              <fieldset>
+                <legend>Programming experience</legend>
+
+                <!-- Years of programming experience -->
+                <div class="mb-3">
+                    <label class="question">How many years of programming experience do you have?</label>
+                </div>
+
+                <div class="mb-3">
+                    <input id="0" type="radio" name="experience" value="Less than 1 year" checked>
+                    <label class="form-label" for="0">Less than 1 year</label>
+                </div>
+
+                <div class="mb-3">
+                    <input id="1-3" type="radio" name="experience" value="1-3 years">
+                    <label class="form-label" for="1-3">1-3 years</label>
+                </div>
+
+                <div class="mb-3">
+                    <input id="3-5" type="radio" name="experience" value="3-5 years">
+                    <label class="form-label" for="3-5">3-5 years</label>
+                </div>
+
+                <div class="mb-3">
+                    <input id="5" type="radio" name="experience" value="More than 5 years">
+                    <label class="form-label" for="5">More than 5 years</label>
+                </div>
+
+                <!-- Programming languages -->
+                <div class="mb-3">
+                    <label class="question">Which programming languages are you proficient in? (Select all that apply)</label>
+                </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="python" checked>
+                    <label class="form-check-label" for="python">Python</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="javascript">
+                    <label class="form-check-label" for="javascript">JavaScript</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="java" id="java" >
+                    <label class="form-check-label" for="java">Java</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="c++">
+                    <label class="form-check-label" for="c++">C++</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="c#" id="c#" >
+                    <label class="form-check-label" for="c#">C#</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="ruby">
+                    <label class="form-check-label" for="ruby">Ruby</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="php" id="php" >
+                    <label class="form-check-label" for="php">PHP</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="swift" id="swift" >
+                    <label class="form-check-label" for="swift">Swift</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="other" id="other" >
+                    <label class="form-check-label" for="other">Other (please specify)</label>
+                  </div>
+              </fieldset>
+              
+              <!-- Learning Preferences ------------------------------------------------- -->
+               <fieldset>
+                <legend>Learning Preferences</legend>
+
+                <!-- Learning programming -->
+                <div class="mb-3">
+                    <label class="question">How did you learn programming? (Select all that apply)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="self-taught" id="self-taught" >
+                    <label class="form-check-label" for="self-taught">Self-taught</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="online-courses" id="online-courses" >
+                    <label class="form-check-label" for="online-courses">Online courses</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="university/college" id="university/college" >
+                    <label class="form-check-label" for="university/college">University/College</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="bootcamps" id="bootcamps" >
+                    <label class="form-check-label" for="online-courses">Bootcamps</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="books" id="books" >
+                    <label class="form-check-label" for="books">Books</label>
+                  </div>
+
+                  <!-- Learning resources -->
+                  <div class="mb-3">
+                    <label class="question">Which resources do you find most helpful for learning new programming languages? (Select all that apply)</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="online-tutorials" id="online-tutorials" >
+                    <label class="form-check-label" for="online-tutorials">Online tutorials</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="books" id="books">
+                    <label class="form-check-label" for="books">Books</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="documentation" id="documentation">
+                    <label class="form-check-label" for="documentation">Documentation</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="coding-bootcamps" id="coding-bootcamps">
+                    <label class="form-check-label" for="coding-bootcamps">Coding bootcamps</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="community-forums" id="community-forums">
+                    <label class="form-check-label" for="community-forums">Community forums</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="video-sources" id="video-sources">
+                    <label class="form-check-label" for="video-sources">Video sources</label>
+                </div>
+               </fieldset>
+
+              <!-- Learning Preferences ------------------------------------------------- -->
+              <fieldset>
+                <legend>Language Preferences</legend>
+              <!-- Preferred language for web development -->
+              <div class="mb-3">
+                <label class="question">Which programming language do you prefer for web development?</label>
+              </div>
+
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="javascript">JavaScript</option>
+                  <option value="python">Python</option>
+                  <option value="php">PHP</option>
+                  <option value="ruby">Ruby</option>
+                  <option value="other">Other (please specify)</option>
+                </select>
+
+              <!--  Preferred language for data analysis -->
+              <div class="mb-3">
+                <label>Which programming language do you prefer for data analysis?</label>
+              </div>
+
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="python">Python</option>
+                <option value="r">R</option>
+                <option value="julia">Julia</option>
+                <option value="other">Other (please specify)</option>
+              </select>
+
+              <!--  Preferred language for mobile app development -->
+              <div class="mb-3">
+                <label class="question">Which programming language do you prefer for mobile app development?</label>
+              </div>
+
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="swift">Swift</option>
+                <option value="kotlin">Kotlin</option>
+                <option value="java">Java</option>
+                <option value="react-native">React Native</option>
+                <option value="other">Other (please specify)</option>
+              </select>
+
+              </fieldset>
+               
+               <!-- Feedback and Suggestions ------------------------------------------------- -->
+                <fieldset>
+                  <legend>Feedback and Suggestions</legend>
+              
+              <!-- Aditional comments -->
+               <div class="mb-3">
+                <label class="question">Any additional comments or suggestions?</label>
+              </div>
+
+              <div class="form-floating">
+                <!--To set a custom height on your <textarea>, do not use the rows attribute. Instead, set an explicit height (either inline or via custom CSS).-->
+                <textarea class="form-control" placeholder="Leave a comment here" id="comments" style="height: 100px"></textarea>
+                <label for="comments">Comments</label>
+              </div>
+        </form>
+    </main>
+    <footer>
+      <div class="row rows-col-4">
+        <div class="col-4">
+          <pre><code>&lt;ANAIRADEV&gt;</code></pre>
+        </div>
+        <div class="col-4">
+          <span>Copyright 2024</span>
+        </div>
+        <div class="col">
+          <span><a href="https://github.com/AArianaParra" target="_blank">Contact me</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+<html>
