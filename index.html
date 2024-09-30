@@ -9,26 +9,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <header>
-        <div class=" row rows-col-4">
-            <div  class="col">
-                <h1><pre><code>&lt;Programmer form&gt;</code></pre></h1>
+    <header class="fixed-top row rows-col-4">
+            <div id="programmer-title-container" class="col-6 col-lg-8">
+                <h1 id="programmer-title"><pre><code>&lt;Programmer form&gt;</code></pre></h1>
                 <!--"&lt;" represents "<"
                 "&gt;" represents ">"-->
             </div>
-            <div  class="col">
+            <div  class="col button-container">
               <!-- IMPORTANT: setting the styles here is not affected by bootstrap overwritting -->
-                <button class="btn btn-default" style="color: white;">Typical format</button>
+                <a class="button text-decoration-none" href="#typical-format-title" style="color: white;">Typical format</a>
             </div>
-            <div  class="col">
-                <button class="btn" style="color: white;">Modern format</button>
+            <div  class="col button-container">
+                <a class="button text-decoration-none" href="#modern-format-title" style="color: white;">Modern format</a>
             </div>
-        </div>
     </header>
-    <main class="container-fluid container mt-5">
+    <main class="container mt-5">
+      <div class="empty-container" id="typical-format-title"></div>
+      <!--------------------------------------------------  TYPICAL FORMAT ------------------------------------------->
       <hr>
-        <form class="d-flex flex-column gap-3" method="post" action='https://register-demo.freecodecamp.org' id="survey-form" name="survey-form">
-          <h3 class="format-title">Typical format</h3>
+        <form  class="d-flex flex-column gap-3"  method="post" action='https://register-demo.freecodecamp.org' id="survey-typical-form" name="survey-typical-form">
+          
+          <h3  class="format-title">Typical format</h3>
+
+
             <!-- Basic information------------------------------------------------- -->
              <fieldset id="basic-info" class="border p-3" >
                 <legend class="">Basic information</legend>
@@ -46,7 +49,7 @@
 
                 <div class="mb-3 row rows-col-3 basic-info">
                 <label class="form-label col-4" for="occupation">Occupation: </label>
-                <input class="form-control form-control-md col basic-input" id="occupation" type="text" placeholder="Type your name" aria-label="Type your occupation" required>
+                <input class="form-control form-control-md col basic-input" id="occupation" type="text" placeholder="Type your occupation" aria-label="Type your occupation" required>
                 </div>
 
              </fieldset>
@@ -208,7 +211,7 @@
                 <label class="question">Which programming language do you prefer for web development?</label>
               </div>
 
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Select the programming language">
                   <option selected>Open this select menu</option>
                   <option value="javascript">JavaScript</option>
                   <option value="python">Python</option>
@@ -222,7 +225,7 @@
                 <label>Which programming language do you prefer for data analysis?</label>
               </div>
 
-              <select class="form-select" aria-label="Default select example">
+              <select class="form-select" aria-label="Select the programming language">
                 <option selected>Open this select menu</option>
                 <option value="python">Python</option>
                 <option value="r">R</option>
@@ -260,12 +263,123 @@
                 <!--To set a custom height on your <textarea>, do not use the rows attribute. Instead, set an explicit height (either inline or via custom CSS).-->
                 <textarea  class="form-control" placeholder="Leave a comment here" id="comments" style="height: 100px; width:90%; margin: 10px auto"></textarea>
                 <label for="comments" style="margin-left: 40px;">Comments</label>
+                <input id="typical-submit-btn" class="btn btn-primary" type="submit" value="Submit">
               </div>
             </fieldset>
+        </form>
 
-            <fieldset>
-              <input class="btn btn-default" type="submit" value="Submit">
-            </fieldset>
+<!--------------------------------------------------  MODERN FORMAT ------------------------------------------->
+
+        <div class="empty-container" id="modern-format-title"></div>
+        <hr>
+        <form class="d-flex flex-column gap-3"  href="#modern-format-title" method="post" action='https://register-demo.freecodecamp.org' id="survey-modern-form" name="survey-modern-form">
+
+          <h3  class="format-title">Modern format</h3>
+          <h6 style="color: white">Interested in learning programming? Register down here!</h6>
+          
+          <!-- Basic information------------------------------------------------- -->
+           <fieldset id="registry-form-fieldset" class="border p-3" >
+           <legend class="">Registry form</legend>
+           <hr class="fieldset-hr">
+            
+           <div class="row rows-col-3">
+
+           <div class="mb-3 form-floating basic-info-modern col-md-6 col-12" >
+            <input class="form-control  basic-input" id="name" type="text" placeholder="Type your name" aria-label="Type your name" required>
+            <label class="form-label" for="name">Name </label>
+           </div>
+
+           <div class="mb-3 form-floating basic-info-modern col-md-6 col-12">
+            <input class="form-control  basic-input" id="last-name" type="text" placeholder="Type your last name" aria-label="Type your last name" required>
+            <label class="form-label" for="last-name">Last name </label>
+           </div>
+        
+           <div class="mb-3 form-floating basic-info-modern col-md-6 col-12">
+            <input class="form-control basic-input" id="email" type="email" placeholder="Type your email" aria-label="Type your email" required>
+            <label class="form-label" for="email">Email </label>
+           </div>
+
+           <div class="mb-3 form-floating basic-info-modern col-md-6 col-12" >
+            <input class="form-control  basic-input" id="occupation" type="text" placeholder="Type your occupation" aria-label="Type your occupation" required>
+            <label class="form-label" for="occupation">Occupation </label>
+           </div>
+        
+           <div class="mb-3 form-floating basic-info-modern col-md-6 col-12">
+             <input class="form-control basic-input" id="password" type="password" placeholder="Type your password" aria-label="Type your password" required>
+             <label class="form-label" for="occupation">Password </label>
+           </div>
+
+           <div class="mb-3 form-floating basic-info-modern col-md-6 col-12">
+            <input class="form-control basic-input" id="password-confirmation" type="password" placeholder="Confirm your password" aria-label="Confirm your password" required>
+            <label class="form-label" for="password-confirmation">Confirm password </label>
+          </div>
+
+           <div class="mb-3 form-floating basic-info-modern col-12">
+            <input class="form-control  basic-input" id="address1" type="text" placeholder="Type your address" aria-label="Type your address" required>
+            <label class="form-label" for="address1">Address 1 </label>
+           </div>
+
+           <div class="mb-3 form-floating basic-info-modern col-12">
+            <input class="form-control  basic-input" id="address2" type="text" placeholder="Type your address" aria-label="Type your address" required>
+            <label class="form-label" for="address2">Address 2 </label>
+           </div>
+
+           <div class="mb-3 form-floating basic-info-modern col-md-5 col-12" >
+            <input class="form-control  basic-input" id="city" type="text" placeholder="Type your city" aria-label="Type your city" required>
+            <label class="form-label" for="city">City </label>
+           </div>
+
+           <div class="basic-info-modern col-md-4 col-12">
+           <select id="state-select" class="form-select" aria-label="Select the state">
+            <option selected>Open this select menu</option>
+            <option value="state1">State 1</option>
+            <option value="state2">State 2</option>
+            <option value="state3">State 3</option>
+            <option value="state4">State 4</option>
+          </select>
+        </div>
+
+        <div class="mb-3 form-floating basic-info-modern col-md-3 col-12" >
+          <input class="form-control  basic-input" id="zip" type="text" placeholder="Type your zip code" aria-label="Type your zip code" required>
+          <label class="form-label" for="zip">Zip code </label>
+         </div>
+
+         <div id="range-container" class="mb-3 basic-info-modern col-md-6 col-12" style="padding-top: 40px;">
+          <label for="customRange3" class="form-label">What is your programming level from 0 to 5?</label>
+          <input type="range" class="form-range" min="0" max="5" step="1" id="customRange3">
+         </div>
+
+         <div class="mb-3 basic-info-modern col-md-6 col-12" style="padding-top: 40px;">
+          <label for="formFile" class="form-label">Upload a profile picture</label>
+          <input class="form-control" type="file" id="formFile">
+        </div>
+
+        <div id="rememberMe-check-container" class="mb-3 form-check basic-info-modern col-md-6 col-12">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        </div>
+
+        <div id="submit-container" class="mb-3 basic-info-modern col-md-6 col-12">
+        <input id="modern-submit" class="btn btn-primary" type="submit" value="Submit">
+      </div>
+
+          </div>        
+           </fieldset>
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </form>
     </main>
     <footer>

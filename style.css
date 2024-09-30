@@ -2,6 +2,7 @@
     
     box-sizing: border-box;
     margin: 0 auto;
+    padding: 0;
     text-align: center;
     
   }
@@ -13,6 +14,34 @@
    scroll-behavior: smooth;
   }
 
+  .empty-container {
+    height: 40px;
+  }
+
+  header {
+    background-color: darkblue;
+    padding: 10px;
+    
+  }
+
+
+  #programmer-title-container {
+    text-align: left;
+  }
+
+  .button {
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    padding: 8px;
+  }
+
+  .button:hover {
+    background-color: rgb(194, 194, 214);
+    color: darkblue !important;
+  }
+
+
   body {
     /*background-image: url("background.jfif");
     background-repeat: no-repeat;
@@ -20,9 +49,9 @@
     background-color: darkblue !important;
   }
 
-  form {
-    width: 70%;
-  }
+  #survey-typical-form {
+    max-width: 500px;
+  } 
 
   fieldset {
     background-color: rgb(226, 231, 233);
@@ -83,10 +112,43 @@ input[type="checkbox"] + label { /*This points at all labels that have inputs ty
 
 
 /* div:input[type="checkbox"]  does not work*/
-.form-check {
+#survey-typical-form .form-check {
   padding-left: 40% !important;
   /* padding-left: 120px !important; Only solves the problem for smaal screen sizes*/
    /*width: 40% ;  not the solution*/
   /*background-color: blueviolet;*/
 } /* This does work */
 
+#typical-submit-btn {
+  margin-bottom: 20px;;
+}
+
+/* MODERN -------------------------------------------------------*/
+
+.basic-info-modern label {
+  margin-left: 10px;
+}
+
+#state-select {
+  height: 78%;
+  min-height: 50px;
+}
+
+#rememberMe-check-container{
+  padding-left: 160px !important;
+}
+
+#submit-container {
+  padding-right: 20px !important;
+}
+
+@media screen and (max-width: 500px) {
+  #programmer-title {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
+  
+}
